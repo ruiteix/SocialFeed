@@ -48,6 +48,7 @@ class TwitterSearchApiProvider extends AbstractProvider
             'query' => array(
                 'q' => $parameters['query'],
                 'max_id' => $parameters['max_id'],
+                'count' => $parameters['count']
             ),
         ));
 
@@ -67,6 +68,7 @@ class TwitterSearchApiProvider extends AbstractProvider
 
         $resolver->setDefaults(array(
             'max_id' => '',
+            'count'  => ''
         ));
     }
 
