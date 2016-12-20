@@ -90,7 +90,7 @@ class FacebookPostFactory implements PostFactoryInterface
                 $reference = new Reference();
                 $reference
                     ->setIndices(array($messageTag['offset'], $messageTag['offset'] + $messageTag['length']))
-                    ->setType($typeMap[$messageTag['type']])
+                    //->setType($typeMap[$messageTag['type']])
                     ->setData($messageTag);
 
                 $post->addReference($reference);

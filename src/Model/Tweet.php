@@ -14,10 +14,27 @@ namespace Lns\SocialFeed\Model;
 /**
  * Tweet.
  */
-class Tweet extends AbstractPost implements PostInterface
-{
-    public function getType()
-    {
-        return 'tweet';
-    }
+class Tweet extends AbstractPost implements PostInterface {
+
+  protected $followersCount;
+
+  public function getType() {
+    return 'tweet';
+  }
+
+  public function getFollowersCount() {
+    return $this->followersCount;
+  }
+
+  /**
+   * setIdentifier.
+   *
+   * @param $followersCount
+   */
+  public function setFollowersCount($followersCount) {
+    $this->followersCount = $followersCount;
+
+    return $this;
+  }
+
 }

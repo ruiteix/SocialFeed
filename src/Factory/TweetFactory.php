@@ -44,6 +44,7 @@ class TweetFactory implements PostFactoryInterface
         $author->setUsername($data['user']['screen_name']);
 
         $tweet
+            ->setFollowersCount($data['user']['followers_count'])
             ->setIdentifier($data['id'])
             ->setMessage($data['text'])
             ->setCreatedAt(new \DateTime($data['created_at']))
